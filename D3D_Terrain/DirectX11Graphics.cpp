@@ -388,7 +388,7 @@ bool DirectX11Graphics::InitializeScene()//VertexBuffer.h 작성후 추가
 		/*=======*/
 
 		/*Terrain*/
-		if (terrain.Initialize(device.Get(), deviceContext.Get(), constantMatricesBuffer, "Textures\\height65.bmp", "Textures\\box.jpg", 10))
+		if (terrain.Initialize(device.Get(), deviceContext.Get(), constantMatricesBuffer, "Textures\\heightmap.bmp", "Textures\\seamless_grass.jpg", 10))
 			return true;
 			/*=======*/
 	}

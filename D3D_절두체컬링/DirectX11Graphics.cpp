@@ -136,6 +136,7 @@ void DirectX11Graphics::RenderFrame() // winapi의 더블버퍼링과 유사(back버퍼에 �
 	//GameObject Primitive Mesh Draw
 
 	if (frustum.IsInFrustumBoundsSphere(PrimitiveObj.GetTransform()->GetPosition(), XMVectorGetX(PrimitiveObj.GetTransform()->GetScale())/*bounds*/))//절두체 컬링 작업 추가 
+	//if (frustum.IsInFrustumBoundsSphere(PrimitiveObj.GetTransform()->GetPosition(), 0.0f /*XMVectorGetX(PrimitiveObj.GetTransform()->GetScale())*//*bounds*/))//절두체 컬링 작업 추가 , 카메라 화면경계로 컬링 작업을 보는 메서드
 		PrimitiveObj.Draw(cameraObj.GetComponent<DXCamera>()->GetViewProjectionMatrix());
 
 	swapChain->Present(NULL, NULL);
